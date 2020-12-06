@@ -3,6 +3,7 @@ const chatMessage = document.getElementById('chat-form');
 const chatBlock = document.querySelector('.chat-messages');
 const roomName = document.getElementById('room-name');
 const userList = document.getElementById('users');
+const typing = document.getElementById('typing');
 
 
 
@@ -36,7 +37,9 @@ socket.on('message',(message) =>{ // receives the message from the server and me
     
 });
 
-
+chatMessage.addEventListener("input", (e)=>{
+  console.log("Typing");
+});
 
 chatMessage.addEventListener('submit',(e)=>{
 e.preventDefault(); // since submit event submits data to file and page reloads / we are avoid that
