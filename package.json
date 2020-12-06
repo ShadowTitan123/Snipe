@@ -1,0 +1,23 @@
+{
+  "name": "snipe",
+  "version": "1.0.0",
+  "description": "Snipe - A Realtime ChatApp Developed By Mohammed Adil and Mohammed Zabeeh",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",  
+    "dev": "nodemon server"
+  },
+  "keywords": [
+    "snipe"
+  ],
+  "author": "Mohammed Adil and Mohammed Zabeeh",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "moment": "^2.29.1",
+    "socket.io": "^3.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
