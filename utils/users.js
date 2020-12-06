@@ -18,6 +18,14 @@ function getCurrentUser(id){
 
 }
 
+//Get Current User from
+
+function getCurrentUserByName(user_name){
+
+  return users.find(user => user.username === user_name);
+
+}
+
 
 // User leaves chat
 function userLeave(id) {
@@ -37,7 +45,8 @@ function userLeave(id) {
     userJoin,
     getCurrentUser,
     userLeave,
-    getRoomUsers
+    getRoomUsers,
+    getCurrentUserByName
   };
   
 

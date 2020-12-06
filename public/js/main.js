@@ -39,7 +39,15 @@ socket.on('message',(message) =>{ // receives the message from the server and me
 });
 
 input_msg.addEventListener("input", (e)=>{
-  console.log("Typing");
+  //console.log("Typing");
+  socket.emit('gettyper',username);
+
+  socket.on('showTyper', (user) => {
+   
+    outputTyper(user);
+  });
+
+  
 });
 
 chatMessage.addEventListener('submit',(e)=>{
@@ -88,3 +96,15 @@ function outputUsers(users) {
 
    }
   
+
+   // Typing
+function outputTyper(user) {
+  if(input_msg != ''){
+    let type_msg = `${user} is Typing...`;
+    typing.innerHTML = type_msg;
+  }else{
+    let type_msg = '';
+    typing.innerHTML = type_msg;
+  }
+  
+}

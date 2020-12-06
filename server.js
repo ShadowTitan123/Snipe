@@ -6,7 +6,7 @@ const path = require('path'); // core module of node , so no need to install
 const http = require('http');
 const socketio = require('socket.io');
 const FormatMessage = require('./utils/messages.js')
-const {userJoin , getCurrentUser ,userLeave , getRoomUsers } = require('./utils/users.js')
+const {userJoin , getCurrentUser ,userLeave , getRoomUsers ,getCurrentUserByName } = require('./utils/users.js')
 
 const server = http.createServer(app); // getting the server from express to make sockets work 
 const io = socketio(server);
@@ -44,6 +44,12 @@ io.on('connection', (socket) =>{  //io.on listens for events , this is connectio
     socket.on('ChatMessage',(msg)=>{
         // console.log(msg);
          io.to(user.room).emit('message',FormatMessage(`${user.username}`,msg)); // universal emit - to all users 
+     });
+
+     socket.on('gettyper',(username)=>{
+        const typer = getCurrentUserByName(username);
+        //  io.to(user.room).emit('message',FormatMessage(`${user.username}`,msg)); // universal emit - to all users 
+        io.to(user.room).emit('showTyper',typer.username)
      });
 
      
