@@ -63,6 +63,7 @@ socket.emit('ChatMessage',msg);
 
 e.target.elements.msg.value = '';
 e.target.elements.msg.focus(); 
+typing.innerHTML = '';
 
 });
 
@@ -103,8 +104,8 @@ function outputTyper(user) {
     let type_msg = `${user} is Typing...`;
     typing.innerHTML = type_msg;
   }else{
-    let type_msg = '';
-    typing.innerHTML = type_msg;
+ 
+    typing.innerHTML = '';
   }
   
 }
