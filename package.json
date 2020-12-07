@@ -4,7 +4,7 @@
   "description": "Snipe - A Realtime ChatApp Developed By Mohammed Adil and Mohammed Zabeeh",
   "main": "server.js",
   "scripts": {
-    "start": "node server",  
+    "start": "node server",
     "dev": "nodemon server"
   },
   "keywords": [
@@ -15,6 +15,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "moment": "^2.29.1",
+    "push.js": "^1.0.12",
     "socket.io": "^3.0.3"
   },
   "devDependencies": {
