@@ -89,16 +89,26 @@ typing.innerHTML = '';
 
 function OutputMessage(Message){
 
+  
 
     //Creating a div , add p in template string , then appending the child ( so that it comes after parent )
     const div = document.createElement('div');
     div.classList.add('message');
-    div.innerHTML = `	<p class="meta" style="color:#9CC101";> ${String(Message.username)} <span> ${Message.time} </span></p>  
+    div.innerHTML = `	<p class="meta" style="color:#9CC101";> ${escapeHtml(Message.username)} <span> ${Message.time} </span></p>  
     <p class="text">
-        ${String(Message.message)}
+        ${escapeHtml(Message.message)}
     </p>`;
 
     document.querySelector('.chat-messages').appendChild(div);
+}
+
+function escapeHtml(unsafe) {
+  return unsafe
+       .replace(/&/g, "&amp;")
+       .replace(/</g, "&lt;")
+       .replace(/>/g, "&gt;")
+       .replace(/"/g, "&quot;")
+       .replace(/'/g, "&#039;");
 }
 
 // Add room name to DOM
