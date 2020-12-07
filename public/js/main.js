@@ -93,9 +93,9 @@ function OutputMessage(Message){
     //Creating a div , add p in template string , then appending the child ( so that it comes after parent )
     const div = document.createElement('div');
     div.classList.add('message');
-    div.innerHTML = `	<p class="meta" style="color:#9CC101";> ${Message.username} <span> ${Message.time} </span></p>  
+    div.innerHTML = `	<p class="meta" style="color:#9CC101";> ${String(Message.username)} <span> ${Message.time} </span></p>  
     <p class="text">
-        ${Message.message}
+        ${String(Message.message)}
     </p>`;
 
     document.querySelector('.chat-messages').appendChild(div);
