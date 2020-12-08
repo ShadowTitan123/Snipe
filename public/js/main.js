@@ -61,6 +61,22 @@ input_msg.addEventListener("input", (e)=>{
   
 });
 
+input_msg.addEventListener("keyup", (event)=>{
+ 
+  var key = event.keyCode || event.charCode;
+
+  if( key == 8 || key == 46 ){
+    // console.log("kk");
+    if(input_msg.value === ''){
+   // console.log("is empty");
+    typing.innerHTML = '';
+  }
+}
+ 
+
+  
+});
+
 
 // input_msg.addEventListener("keyup", (e)=>{
 //   console.log("Not Typing");
@@ -134,7 +150,7 @@ function outputUsers(users) {
    // Typing
 function outputTyper(user) {
   if(input_msg != ''){
-    let type_msg = `${user} is Typing...`;
+    let type_msg = `${escapeHtml(user)} is Typing...`;
     typing.innerHTML = type_msg;
   }else{
     typing.innerHTML = '';
@@ -149,8 +165,8 @@ function OutputNotification(user){
 
 console.log("notification");
   var notification = user.message;
-  Push.create(`${user.username}`, {
-    body: `${user.message}`,
+  Push.create(`${escapeHtml(user.username)}`, {
+    body: `${escapeHtml(user.message)}`,
     icon: './Snipelogo.png',
     timeout: 3000,
     onClick: function () {
