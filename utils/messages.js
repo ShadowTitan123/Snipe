@@ -6,7 +6,7 @@ function FormatMessage(username,message){
     return{
         username : username,
         message : message,
-        time : moment().format('hh:mm a')
+        time : moment().local().format('hh:mm a')
     };
 
 
