@@ -1,7 +1,8 @@
 
 var peer = new Peer(undefined,{
-    host: '/',
-    port: '3001'
+    secure: true, 
+    host: 'https://snipe-chat.herokuapp.com/',
+    port: 443,
 });
 
 // connecting to peer server running on port 3001 and specifing when to run and generate client id - /video
