@@ -30,7 +30,7 @@ socket.on('roomUsers', ({ room, users }) => {
 
 socket.on('message',(message) =>{ // receives the message from the server and message is the parameter
  
-    console.log(message);
+  //  console.log(message);
     OutputMessage(message);
 
 
