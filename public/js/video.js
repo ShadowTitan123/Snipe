@@ -1,7 +1,7 @@
 
 var peer = new Peer(undefined,{
     secure: true, 
-    host: 'https://snipe-chat.herokuapp.com/',
+    host: 'snipe-chat.herokuapp.com',
     port: 443,
 });
 
