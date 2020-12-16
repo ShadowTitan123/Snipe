@@ -5,6 +5,9 @@ const roomName = document.getElementById('room-name');
 const userList = document.getElementById('users');
 const typing = document.getElementById('typing');
 const input_msg = document.getElementById('msg');
+const chat_content = document.getElementById('chat-content');
+
+
 
 
 
@@ -33,10 +36,8 @@ socket.on('message',(message) =>{ // receives the message from the server and me
   //  console.log(message);
     OutputMessage(message);
 
-
-    //scroll down 
-
     chatBlock.scrollTop = chatBlock.scrollHeight;
+
 
     
 });
@@ -110,9 +111,9 @@ function OutputMessage(Message){
     //Creating a div , add p in template string , then appending the child ( so that it comes after parent )
     const div = document.createElement('div');
     div.classList.add('message');
-    div.innerHTML = `	<p class="meta" style="color:#9CC101";> ${escapeHtml(Message.username)} <span> ${Message.time} </span></p>  
-    <p class="text">
-        ${escapeHtml(Message.message)}
+    div.innerHTML = ` <p class="meta d-flex"> ${escapeHtml(Message.username)} <span class="ml-auto meta-time">  ${Message.time} </span></p>
+    <p class="text">  ${escapeHtml(Message.message)}
+       
     </p>`;
 
     document.querySelector('.chat-messages').appendChild(div);
@@ -138,11 +139,20 @@ function outputUsers(users) {
 
   
     userList.innerHTML = '';
-    users.forEach(user=>{
-      const li = document.createElement('li'); // creating li's according to available users in array 
-      li.innerText = user.username;
-      userList.appendChild(li);   // appending a new li for every user 
+    var onlineUsers = '';
+
+    users.forEach((user,index)=>{
+
+      onlineUsers += ` <li class="nav-item">
+      <a class="nav-link user-display" href="#"> ${user.username} </a>
+    </li>
+
+`; 
+     
+     
     });
+
+    userList.innerHTML = onlineUsers;   // appending a new li for every user 
 
    }
   

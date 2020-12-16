@@ -1,51 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
-			integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
-			crossorigin="anonymous"
-		/>
-		<link rel="stylesheet" href="css/style.css" />
-		<title>Snipe App</title>
-	</head>
-	<body>
-		<div class="join-container">
-			<header class="join-header">
-				<img src="img/Snipelogo.png" style="height: 5%; width: 15%;"> <span><h1> Snipe </h1> </span>
-			</header>
-			<main class="join-main">
-				<form action="chat.html">
-					<div class="form-control">
-						<label for="username">Username</label>
-						<input
-							type="text"
-							name="username"
-							id="username"
-							placeholder="Enter username..."
-							required
-						/>
-					</div>
-					<div class="form-control">
-						<label for="room">Room</label>
-						<select name="room" id="room">
-							<option value="Anime">Anime</option>
-							<option value="Work">Work</option>
-							<option value="Movies">Movies</option>
-							<option value="Games">Games</option>
-							<option value="Programming">Programming</option>
-							
-						</select>
-					</div>
-					<button type="submit" class="btn">Join Chat</button>
-				</form>
-			</main>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="msapplication-TileColor" content="#111111">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#111111">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+      integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+      crossorigin="anonymous"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Snipe</title>
+  </head>
+  <body>
 
-		<center style="margin-top: 30px;"><a href ="snipemeet.html"> <b style="color:#9CC101">Switch To Snipe Meet</b> </a>  </center>	
-		</div>
-	</body>
+    <section class="entry-block py-0 animate__animated animate__fadeIn animate__delay-1s">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="logo-head">
+            <img class="logo" src="img/Snipelogo.png" width="35px" height="35px" alt="Snipe-logo">
+            <h1>nipe</h1>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-6 m-md-auto ml-lg-0 col-lg-5">
+             <img src="img/bg_entry.svg" alt="">
+          </div>
+          <div class="col-12 col-md-8 col-lg-6 col-xl-5 text-left py-5 my-2">
+            <div class="entry-box">
+              <div class="row">
+                <div class="col">
+                  <h3>Snipe to your workspace</h3>
+                  <span class="entry-tag">
+                    Enter your workspace name 
+                  </span>
+                </div>
+              </div>
+              <form action="chat.html">
+                <div class="row">
+                  <div class="col mt-4">
+                    <div class="wrap-input100">
+                      <input class="input100" type="text" name="username" id="username" placeholder="Username" autocomplete="off" required />
+                      <span class="focus-input100"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mt-4">
+                  <div class="col">
+                    <div class="wrap-input100">
+                      <select class="input100" name="room" id="room">
+                      <option selected disabled>Select Snipespace...</option>
+                      <option value="Anime">Anime</option>
+                      <option value="Work">Work</option>
+                      <option value="Movies">Movies</option>
+                      <option value="Games">Games</option>
+                      <option value="Programming">Programming</option>
+                    </select>
+                    <span class="focus-input100"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mt-4">
+                  <div class="col-12">
+                    <button class="btn btn-block btn-secondary" type="submit">Join</button>
+                  </div>
+                </div>
+              </form>
+              <div class="row mt-4">
+                  <div class="col-12">
+                    <div class="switch-meet">
+                       <p>or</p>
+                       <a href="snipemeet.html" class="btn btn-block btn-outline-secondary meet-secondary-btn mt-2"><i class="fas fa-video mr-2"></i> Switch to snipe meet</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-app-1 custom-animation"><img src="img/animate_icon/icon_1.png" alt=""></div>
+      <div class="hero-app-2 custom-animation3"><img src="img/animate_icon/icon_8.png" alt=""></div>
+      <div class="hero-app-5 custom-animation2"><img src="img/animate_icon/icon_2.png" alt=""></div>
+      <div class="hero-app-6 custom-animation11"><img src="img/animate_icon/icon_8.png" alt=""></div>
+    </section>
+
+  </body>
 </html>
