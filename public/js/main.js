@@ -37,6 +37,7 @@ socket.on('message',(message) =>{ // receives the message from the server and me
     OutputMessage(message);
 
     chatBlock.scrollTop = chatBlock.scrollHeight;
+    
 
 
     
