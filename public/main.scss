@@ -442,6 +442,10 @@ textarea:-ms-input-placeholder { color: #D4D4D5; padding-top: 4px;}
   }
 }
 
+.material-icons{
+  vertical-align:middle;
+}
+
 
 .clear 
     { 
@@ -468,11 +472,7 @@ textarea:-ms-input-placeholder { color: #D4D4D5; padding-top: 4px;}
   filter: drop-shadow(0 0 3px #222);
 }
 
-
-/*** Entry Page ***/
-.entry-block{
-  .logo-head{
-      padding-top: 30px;
+.logo-head{
       display: flex;
       flex-wrap: wrap;
     h1{
@@ -481,9 +481,15 @@ textarea:-ms-input-placeholder { color: #D4D4D5; padding-top: 4px;}
         letter-spacing:2px;
     }
   }
+
+  .lead{
+    font-size:1rem;
+  }
+/*** Entry Page ***/
+.entry-block{
   .entry-box {
     background: #FFF;
-    padding: 3rem 2.5rem;
+    padding: 2.8rem 2.5rem;
     overflow: hidden;
     color: $secondary-color;
     border-radius: .25rem;
@@ -493,8 +499,6 @@ textarea:-ms-input-placeholder { color: #D4D4D5; padding-top: 4px;}
     }
     .entry-tag{
         font-size: 14px;
-        line-height: 27px;
-        margin-bottom: 32px;
     }
     .switch-meet{
         display: block;
@@ -518,10 +522,11 @@ textarea:-ms-input-placeholder { color: #D4D4D5; padding-top: 4px;}
       padding: .3rem 1rem;
     }
     .user-display::before{
-      content: "\f2bd";
-      font-family: 'Font Awesome\ 5 Free';
+      content: "\e851";
+      font-family: 'Material Icons';
       color:$light-color;
-      font-weight: 900;
+      font-size: 1rem;
+      vertical-align: middle;
     }
   }
   .chat-messages{
@@ -571,6 +576,7 @@ textarea:-ms-input-placeholder { color: #D4D4D5; padding-top: 4px;}
   padding: 20px;
   background-color: $light-color;
   box-shadow: 0 .3125rem .875rem 0 rgba(129,129,129,.2)!important;
+  z-index: 99;
 }
 
 @media only screen and (max-width:767px){

@@ -16,11 +16,8 @@
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
-      integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
-      crossorigin="anonymous"
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet" 
     />
     <link
     rel="stylesheet"
@@ -33,12 +30,12 @@
   <body>
 
     <section class="chat-container animate__animated animate__fadeIn">
-      <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-2 shadow">
+      <nav class="navbar-dark d-flex sticky-top bg-dark p-2 shadow">
         <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="index.html">
           <img class="logo" src="img/Snipelogo.png" width="35px" height="35px" alt="Snipe-logo">
           nipe</a>
 
-        <ul class="navbar-nav px-2">
+        <ul class="navbar-nav ml-auto px-2">
           <li class="nav-item text-nowrap">
             <a class="btn btn-secondary p-2" href="index.html">Leave Room</a>
           </li>
@@ -49,7 +46,7 @@
         <div class="row">
           <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-dark sidebar">
             <div class="pt-3">
-              <h5 class="user-display-title">Online users <i class="ml-2 fas fa-chevron-down"></i></h5>
+              <h5 class="user-display-title">Online users <span class="material-icons">keyboard_arrow_down</span></h5>
               <ul class="nav flex-column" id="users">
                 <!-- <li class="nav-item">
                   <a class="nav-link user-display" href="#"> Touka Chan </a>
@@ -86,7 +83,7 @@
                   <input class="input100" id="msg" type="text" placeholder="Type a message" required autocomplete="off" />
                   <span class="focus-input100"></span>
                 </div>
-                <button type="submit" class="btn btn-secondary px-4"><i class="fas fa-paper-plane mr-2"></i></button>
+                <button type="submit" class="btn btn-secondary px-4"><span class="material-icons">send</span></button>
               </form>
 
 
