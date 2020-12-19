@@ -45,9 +45,13 @@
           <div class="col-12 ml-md-auto col-md-7 col-lg-6 pb-md-0">
             <h1>Snipe Meet</h1>
             <p class="lead">From professional to fun video meetings, Secure service which is free and available to all.</p>
-            <div class="mt-4">
-              <a class="btn btn-secondary px-3 py-2" href="/video"><span class="material-icons mr-2">video_call</span>Start instant meeting</a>
-              <a class="btn btn-outline-secondary ml-2 px-3 py-2" href="/video"><span class="material-icons mr-2">link</span>Create meeting link</a>
+            <div class="row">
+              <div class="col-lg-6 col-sm-12 mt-4">
+                <a class="btn btn-block btn-secondary px-3 py-2" href="/video"><span class="material-icons mr-2">video_call</span>Start instant meeting</a>
+              </div>
+              <div class="col-lg-6 col-sm-12 mt-4">
+                <a type="button" class="btn btn-block btn-outline-secondary px-3 py-2" href="#meetingLink"><span class="material-icons mr-2">link</span>Create meeting link</a>
+              </div>
             </div>
           </div>
         </div>
@@ -57,6 +61,22 @@
       <div class="hero-app-5 custom-animation2"><img src="img/animate_icon/icon_2.png" alt=""></div>
       <div class="hero-app-6 custom-animation11"><img src="img/animate_icon/icon_5.png" alt=""></div>
     </section>
+
+    <div id="meetingLink" class="meeting-popup overlay">
+    	<div class="popup">
+    		<h6><strong>Link to your meeting</strong></h6>
+    		<a class="close" href="#">&times;</a>
+    		<div class="content">
+          <p>Copy and share this link to the people whom you wanna meet.</p>
+          <div class="create-link">
+             <div class="d-flex flex-row align-items-center justify-content-between flex-wrap">
+                  <p class="created-link" id="createdLink">https://meet.google.com/oiy-xfth-zng</p>
+                  <a type="button"><span class="material-icons">content_copy</span></a>
+             </div>
+          </div>
+    		</div>
+    	</div>
+    </div>
 
     <script src="dist/js/main.min.js"></script>
 
