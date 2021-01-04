@@ -36,10 +36,8 @@ socket.on('message',(message) =>{ // receives the message from the server and me
   //  console.log(message);
     OutputMessage(message);
 
-    chatBlock.scrollTop = chatBlock.scrollHeight;
-    
-
-
+   console.log(chatBlock);
+   window.scrollTo(0,chatBlock.offsetHeight);
     
 });
 
@@ -57,7 +55,7 @@ input_msg.addEventListener("input", (e)=>{
 
   socket.on('showTyper', (user) => {
    
-    outputTyper(user);
+  //  outputTyper(user);
   });
 
   
